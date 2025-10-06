@@ -3,10 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import {WalletProvider} from "./components/WalletProvider.tsx"
+import {WalletProviderContext} from "./components/WalletContext.tsx"
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
      <WalletProvider>
-      <App />
+      <WalletProviderContext>
+        <App />
+      </WalletProviderContext>
     </WalletProvider>
   </StrictMode>,
 )

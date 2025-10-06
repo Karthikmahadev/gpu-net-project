@@ -47,7 +47,7 @@ const GpuBannerContent: React.FC = () => {
           <hr className="border-gray-500" />
         </div>
         <div className="flex flex-row justify-between gap-[114px] max-[1100px]:gap-5">
-          <h3 className="text-lg font-semibold">Try Astra</h3>
+          <h3 className="text-lg font-semibold text-white">Try Astra</h3>
           <p className="text-sm leading-relaxed text-gray-200">
             Generate image & video and chat with industry’s best trained LLM with exclusive partnership with ByteDance
           </p>

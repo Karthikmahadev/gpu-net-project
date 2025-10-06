@@ -8,13 +8,15 @@ import { GiSurroundedEye } from "react-icons/gi";
 import { FaRegCopyright } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
+import { useWallet } from './WalletContext';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 interface GPUSidebarProps {
     onClose?: () => void;
 }
 
 const GPUSidebar: React.FC<GPUSidebarProps> = ({ onClose }) => {
-    
+    const { address, isConnected, balance } = useWallet()
     return (
         <>
             <div className='gpusidebar h-full'>
@@ -23,6 +25,16 @@ const GPUSidebar: React.FC<GPUSidebarProps> = ({ onClose }) => {
                 <div className='gpusidebar-logo'>
                     <img src='gpulogo.png' alt='GPU Logo' />
                 </div>
+
+                 <div className="gpu-wallet-section flex flex-col items-center mt-4">
+        <ConnectButton />
+        {isConnected && (
+          <div className="text-white mt-2 text-center">
+            <p>Address: {address?.slice(0, 6)}...{address?.slice(-4)}</p>
+            <p>Balance: {balance} ETH</p>
+          </div>
+        )}
+      </div>
 
                 <div className='gpu-wallet-balance flex items-center'>
                     <div className='gpu-wallet-left text-white'>

@@ -36,11 +36,7 @@ const GPUMenu: React.FC = () => {
             icon: <TbArrowForwardUpDouble />
 
         },
-        {
-            heading: "QVEX",
-            icon: <SiSquarespace />
-
-        }
+        
     ]
     const toggleAccordion = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);

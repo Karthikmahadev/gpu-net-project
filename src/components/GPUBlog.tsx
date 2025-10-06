@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { IoHardwareChip } from "react-icons/io5";
 
 interface GPU {
